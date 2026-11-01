@@ -1,0 +1,14 @@
+[
+  {
+    "legs": [{"origin":{"name":"Budapest-Keleti"},"destination":{"name":"Wien Hbf"},"departure":"2026-11-01T07:40:00+01:00","arrival":"2026-11-01T10:20:00+01:00","line":{"name":"RJX 62"}}],
+    "price":{"amount":13,"currency":"EUR","name":"START Europa AT"}
+  },
+  {
+    "legs": [{"origin":{"name":"Budapest-Keleti"},"destination":{"name":"Wien Hbf"},"departure":"2026-11-01T09:40:00+01:00","arrival":"2026-11-01T12:20:00+01:00","line":{"name":"RJX 64"}}],
+    "price":{"amount":19.9,"currency":"EUR","name":"START Europa AT"}
+  },
+  {
+    "legs": [{"origin":{"name":"Budapest-Keleti"},"destination":{"name":"Wien Hbf"},"departure":"2026-11-01T11:40:00+01:00","arrival":"2026-11-01T14:20:00+01:00","line":{"name":"RJX 66"}}],
+    "price":{"amount":16,"currency":"EUR","name":"START Europa AT"}
+  }
+]
