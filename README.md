@@ -8,7 +8,7 @@ A **GitHub Actions-based train fare monitoring agent** that searches ticket pric
 
 1. GitHub Actions runs the script each day (scheduled 07:15 UTC; 08:15 CET / 09:15 CEST), or manually with **Actions → Check Budapest–Vienna train fares → Run workflow**.
 2. The agent uses the open-source [`mav-prices`](https://github.com/MartinLangbecker/mav-prices) library to ask MÁV's **unofficial** booking interface for offers on upcoming dates.
-3. Fares are normalized to EUR, sorted, and deduplicated.
+3. EUR fares are validated, sorted, and deduplicated.
 4. The latest report is saved in `REPORT.md`, `data/latest.json`, `docs/index.html`, and history is appended to `data/history.json`.
 5. GitHub Actions adds a run summary, optionally sends a Telegram message for the first threshold match or a new low, and commits updated reports. The reports link to the **official MÁV ticket website** where you verify the fare and book.
 
@@ -30,21 +30,11 @@ To validate locally *without contacting MÁV*, run `npm run demo`. Demo prices a
 
 ## Set up on your GitHub account
 
-1. [Create a new GitHub repository](https://github.com/new) named `budapest-vienna-fare-agent` (public or private). Don't initialize it with a README if using the commands below.
-2. Unzip this project on your machine and open a terminal inside the project directory.
-3. Commit and push:
+1. Open [Actions](https://github.com/Ayush-Khemani/budapest-vienna-fare-agent/actions/workflows/fare-check.yml) and choose **Run workflow**.
+2. Set a first travel date, number of days, passenger age and whether to search direct trains only. Blank start date means today. Scheduled runs use one adult aged 30 and 14 days.
+3. Read [the latest report](REPORT.md). Every date shows its lowest fare and how many search windows succeeded. An empty run fails visibly; error reports are still saved.
+4. The daily schedule runs automatically from the default branch.
 
-```bash
-git init
-git add .
-git commit -m "Initial Budapest–Vienna fare agent"
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/budapest-vienna-fare-agent.git
-git push -u origin main
-```
-
-4. Open your repository's **Actions** tab, enable workflows if prompted, then select **Check Budapest–Vienna train fares** → **Run workflow**.
-5. Make sure **Settings → Actions → General → Workflow permissions** allows **Read and write permissions** if auto-committing the report fails with a permissions error. You can alternatively remove the commit step and rely on workflow artifacts.
 6. **Optional Telegram alert:** Create a Telegram bot with [@BotFather](https://t.me/BotFather), obtain your chat ID by messaging the bot then using `getUpdates`, and add repository **Settings → Secrets and variables → Actions → New repository secret** for `TELEGRAM_BOT_TOKEN` and `TELEGRAM_CHAT_ID`. They are read only at runtime. The agent sends a notification on the first result at or below the target or when a new daily observed low appears. No secrets are included in code.
 7. Open `REPORT.md` after the first successful run. Optionally enable GitHub Pages with **Settings → Pages → Deploy from a branch → main → /docs** to get the visual report online (on repositories/plans that support Pages).
 
@@ -54,9 +44,12 @@ Configuration is via GitHub Actions file `.github/workflows/fare-check.yml` (env
 
 | Variable | Default | Meaning |
 |---|---|---|
+| `START_DATE` | today | First travel date, YYYY-MM-DD, today or later |
+| `PASSENGER_AGE` | `30` | Age on the travel date (1–99) |
+| `DIRECT_ONLY` | `false` | Set `true` to search direct trains only |
 | `SCAN_DAYS` | `14` | Look at the next 1–60 days; 14 days means ~42 MÁV API requests, subject to internal library details |
-| `FROM_CODE` | `005510009` | MÁV BUDAPEST* station group; alternatively use `005501016` for Keleti |
-| `TO_CODE` | `008103000` | Wien Hbf station ID; verify if MÁV updates its station table |
+| `FROM_CODE` | `005510009` | MÁV BUDAPEST* station group; alternatively use `005510017` for Keleti |
+| `TO_CODE` | `008101003` | Wien Hbf station ID; verify if MÁV updates its station table |
 | `PAUSE_MS` | `1800` | Delay between daily query groups |
 | `ALERT_BELOW_EUR` | `15` | Flags an offer at or under this price and can trigger an optional Telegram notification |
 | `DEMO_MODE` | unset | Only `1` enables fictional offline fixtures |
@@ -99,3 +92,7 @@ tests/                Offline fixture tests; no live fare requests
 - Official ticketshop partnership information: [ÖBB](https://www.oebb.at/en/kooperationen/online-kooperationen)
 
 No railway provider endorses this project.
+
+## Reliability
+
+Each eight-hour window is queried separately to preserve provider errors. DST days use their actual length. Departed trains are excluded. A run with no valid fares exits unsuccessfully and still publishes diagnostics; partial coverage is clearly reported. Dependencies are locked for reproducible installs.
