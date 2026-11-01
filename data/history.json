@@ -6,5 +6,13 @@
     "date": null,
     "scanned": 14,
     "successful": 14
+  },
+  {
+    "checkedAt": "2026-11-01T13:07:17.846Z",
+    "mode": "live",
+    "amount": 13,
+    "date": "2026-11-03",
+    "scanned": 14,
+    "successful": 14
   }
 ]
