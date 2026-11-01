@@ -1,0 +1,55 @@
+name: Check Budapest–Vienna train fares
+on:
+  workflow_dispatch:
+  schedule:
+    # GitHub cron uses UTC; this runs at 08:15 CET / 09:15 CEST.
+    - cron: '15 7 * * *'
+permissions:
+  contents: write
+concurrency:
+  group: train-fare-check
+  cancel-in-progress: false
+jobs:
+  check-fares:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+      - name: Run unit tests
+        run: npm test
+      - name: Check MÁV fares
+        env:
+          SCAN_DAYS: '14'
+          PAUSE_MS: '1800'
+          ALERT_BELOW_EUR: '15'
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: npm run check
+      - name: Save reports and history to repository
+        if: success()
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add REPORT.md docs/index.html data/latest.json data/history.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'chore: refresh daily rail fare report'
+            git push
+          fi
+      - name: Upload results artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: fare-report
+          path: |
+            REPORT.md
+            data/latest.json
+            data/history.json
+          if-no-files-found: warn
+          retention-days: 30
