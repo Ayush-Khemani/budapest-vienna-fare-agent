@@ -1,5 +1,5 @@
 export function notificationReason(best, previousPrice, thresholdEur) {
-  if (!best) return null;
+  if (!best || best.amount > thresholdEur) return null;
   if (previousPrice === null || previousPrice === undefined) {
     return best.amount <= thresholdEur ? 'First fare at or below your target' : null;
   }

@@ -14,6 +14,22 @@ export function makeMarkdown(data) {
     `**Provider:** MÁV pricing interface (via the unofficial \`mav-prices\` package). ÖBB/RegioJet not integrated.`,
     ''
   ];
+  if (data.preferences) {
+    const p = data.preferences;
+    lines.push('## Preferred early-morning direct departures', '',
+      'Departure window: ' + String(p.departureStartHour).padStart(2,'0') + ':00–' + String(p.departureEndHour).padStart(2,'0') + ':00 Budapest time (end exclusive). Travel no later than ' + (p.endDate || 'scan end') + '.', '');
+    if (data.bestPreferred) {
+      lines.push('**Best matching morning fare: ' + euro(data.bestPreferred.amount) + '** · ' + localFormat(data.bestPreferred.departure) + ' → ' + localFormat(data.bestPreferred.arrival) + ' · ' + data.bestPreferred.from + ' → ' + data.bestPreferred.to, '',
+        'Verify / book: ' + data.bestPreferred.bookingUrl, '',
+        'Morning target: ' + euro(data.thresholdEur) + (data.bestPreferred.amount <= data.thresholdEur ? ' — **MATCH**' : ' — above target'), '',
+        '| Date | Departure (Budapest time) | Arrival | Price | Changes |', '|---|---|---|---:|---:|');
+      for (const item of (data.preferredTop || [])) lines.push('| ' + item.date + ' | ' + localFormat(item.departure) + ' | ' + localFormat(item.arrival) + ' | ' + euro(item.amount) + ' | ' + item.changes + ' |');
+    } else lines.push('**No matching morning offers returned by MÁV.** This does not mean sold out.', '');
+    lines.push('', '### Morning offer by travel date', '',
+      '| Date | Best morning price | Coverage |', '|---|---:|---:|');
+    for (const day of (data.daily || [])) lines.push('| ' + day.date + ' | ' + (day.preferredBest ? euro(day.preferredBest.amount) : 'None returned') + ' | ' + day.windowsSuccessful + '/' + day.windowsAttempted + ' |');
+    lines.push('', '## All-day results (not restricted to your departure preference)', '');
+  }
   if (data.best) {
     const b=data.best;
     lines.push(`**Lowest observed MÁV fare: ${euro(b.amount)}** · ${b.date} · ${localFormat(b.departure)} → ${localFormat(b.arrival)} · ${b.from} → ${b.to}`, '',
@@ -37,6 +53,9 @@ export function makeMarkdown(data) {
 export function makeHtml(data) {
   const best = data.best;
   const rows = data.top.map(o => `<tr><td>${safe(o.date)}</td><td>${safe(localFormat(o.departure))}</td><td>${safe(localFormat(o.arrival))}</td><td class="price">${safe(euro(o.amount))}</td><td>${safe(o.changes)}</td><td><a href="${safe(o.bookingUrl)}" target="_blank" rel="noopener noreferrer">Check MÁV ↗</a></td></tr>`).join('\n');
+  const morning = data.bestPreferred;
+  const preferredRows = (data.preferredTop || []).map(o => '<tr><td>' + safe(o.date) + '</td><td>' + safe(localFormat(o.departure)) + '</td><td>' + safe(localFormat(o.arrival)) + '</td><td class="price">' + safe(euro(o.amount)) + '</td><td>' + safe(o.changes) + '</td><td><a href="' + safe(o.bookingUrl) + '" target="_blank" rel="noopener noreferrer">Verify on MÁV ↗</a></td></tr>').join('');
+  const morningSection = data.preferences ? '<section class="hero"><span class="muted">Best preferred direct morning fare (05:00–09:00)</span><strong>' + (morning ? safe(euro(morning.amount)) : 'Unavailable') + '</strong><p>' + (morning ? safe(morning.date + ' · ' + localFormat(morning.departure) + ' → ' + localFormat(morning.arrival) + ' · ' + morning.from + ' → ' + morning.to) : 'No matching morning fare returned') + '</p><p>Target: ' + safe(euro(data.thresholdEur)) + ' · ' + safe(data.preferredCount || 0) + ' matching offers</p></section><h2>Morning options</h2><div class="scroll"><table><thead><tr><th>Date</th><th>Departure</th><th>Arrival</th><th>Fare</th><th>Changes</th><th>Booking</th></tr></thead><tbody>' + (preferredRows || '<tr><td colspan="6">No matching offers</td></tr>') + '</tbody></table></div>' : '';
   const unavailable = !best ? '<p class="notice">No verifiable fares found on this run. Check the workflow logs for errors.</p>' : '';
   return `<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
@@ -44,7 +63,7 @@ export function makeHtml(data) {
 <style>body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,sans-serif;background:#0c1423;color:#eaf1fb;margin:0}main{max-width:1020px;margin:auto;padding:40px 20px}header{border-bottom:1px solid #334155;padding-bottom:18px}h1{font-size:clamp(1.9rem,5vw,3rem);margin:0}.muted{color:#9fb1ca}.hero{margin:26px 0;padding:24px;background:#18253b;border:1px solid #31425c;border-radius:18px}.hero strong{font-size:clamp(2.5rem,7vw,4.5rem);display:block;color:#91ffca}.hero small{color:#a9b8d1}table{width:100%;border-collapse:collapse;background:#172337}td,th{text-align:left;padding:14px;border-bottom:1px solid #31425c}th{color:#bdc9da;font-size:.85rem}.scroll{overflow-x:auto;border-radius:14px}a{color:#88c7ff}.price{font-weight:bold}.notice{color:#ffd18a}.pill{display:inline-block;background:#263852;color:#d5e6ff;border-radius:99px;padding:6px 12px;font-size:.8rem}footer{font-size:.85rem;line-height:1.6;margin-top:26px;color:#a4b1c5}</style></head>
 <body><main><header><span class="pill">GitHub Actions · ${safe(data.mode.toUpperCase())}</span><h1>Budapest → Vienna</h1><p class="muted">Daily train fare tracker · 2nd class · one adult · one-way</p></header>
 <section class="hero"><span class="muted">Lowest observed MÁV fare</span><strong>${best ? safe(euro(best.amount)) : 'Unavailable'}</strong><p>${best ? safe(`${best.date} · ${localFormat(best.departure)} → ${localFormat(best.arrival)} · ${best.from} → ${best.to}`) : 'No successful offer in this run'}</p>${best ? `<p><a href="${safe(best.bookingUrl)}" target="_blank" rel="noopener noreferrer">Verify fare and book with MÁV ↗</a></p>` : ''}<small>Checked ${safe(data.checkedAt)} · ${safe(data.datesSuccessful)}/${safe(data.datesAttempted)} dates successfully searched · Lowest price only within MÁV offers, not every rail operator</small></section>
-${unavailable}<h2>Daily coverage</h2><div class="scroll"><table><thead><tr><th>Date</th><th>Lowest fare</th><th>Windows checked</th></tr></thead><tbody>${(data.daily || []).map(d => `<tr><td>${safe(d.date)}</td><td>${d.best ? safe(euro(d.best.amount)) : 'Unavailable'}</td><td>${safe(d.windowsSuccessful)}/${safe(d.windowsAttempted)}</td></tr>`).join('')}</tbody></table></div><h2>Lowest offers</h2><div class="scroll"><table><thead><tr><th>Date</th><th>Departure</th><th>Arrival</th><th>Fare</th><th>Changes</th><th>Booking</th></tr></thead><tbody>${rows || '<tr><td colspan="6">No offers</td></tr>'}</tbody></table></div>
+${morningSection}${unavailable}<h2>Daily coverage</h2><div class="scroll"><table><thead><tr><th>Date</th><th>Lowest fare</th><th>Windows checked</th></tr></thead><tbody>${(data.daily || []).map(d => `<tr><td>${safe(d.date)}</td><td>${d.best ? safe(euro(d.best.amount)) : 'Unavailable'}</td><td>${safe(d.windowsSuccessful)}/${safe(d.windowsAttempted)}</td></tr>`).join('')}</tbody></table></div><h2>Lowest offers</h2><div class="scroll"><table><thead><tr><th>Date</th><th>Departure</th><th>Arrival</th><th>Fare</th><th>Changes</th><th>Booking</th></tr></thead><tbody>${rows || '<tr><td colspan="6">No offers</td></tr>'}</tbody></table></div>
 <footer><p><b>Important:</b> The agent uses the unofficial open-source <code>mav-prices</code> library. Fares may change before checkout; seat reservations and any payment conversion or service fees are not guaranteed in the quoted price. Live price coverage can fail when MÁV changes its interface. The current agent does <b>not</b> search ÖBB or RegioJet.</p><p>Errors: ${safe(data.errors.map(x=>x.date).join(', ') || 'none')} · ${safe(data.mode === 'demo' ? 'DEMO — entirely fictitious prices' : 'LIVE — retrieved fare quotes')}</p></footer></main></body></html>`;
 }
 
@@ -54,7 +73,7 @@ export async function saveReport(root, data) {
   const historyPath=join(root,'data','history.json');
   let history = [];
   try { const parsed=JSON.parse(await readFile(historyPath,'utf8')); if(Array.isArray(parsed)) history=parsed; } catch (error) { if(error.code !== 'ENOENT') throw error; }
-  history.push({checkedAt:data.checkedAt, mode:data.mode, amount:data.best?.amount ?? null, date:data.best?.date ?? null, scanned:data.datesAttempted, successful:data.datesSuccessful});
+  history.push({checkedAt:data.checkedAt, mode:data.mode, amount:data.best?.amount ?? null, date:data.best?.date ?? null, preferredAmount:data.bestPreferred?.amount ?? null, preferredDate:data.bestPreferred?.date ?? null, scanned:data.datesAttempted, successful:data.datesSuccessful});
   history = history.slice(-120);
   await writeFile(historyPath, JSON.stringify(history,null,2)+'\n');
   await writeFile(join(root,'data','latest.json'),JSON.stringify(data,null,2)+'\n');

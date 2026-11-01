@@ -96,3 +96,10 @@ No railway provider endorses this project.
 ## Reliability
 
 Each eight-hour window is queried separately to preserve provider errors. DST days use their actual length. Departed trains are excluded. A run with no valid fares exits unsuccessfully and still publishes diagnostics; partial coverage is clearly reported. Dependencies are locked for reproducible installs.
+
+
+## Early-morning trip watch — 2–8 November 2026
+
+The automated run currently prioritizes **direct** Budapest → Wien Hbf departures **05:00–09:00 Europe/Budapest time**, for a passenger aged 22, searching through **8 November 2026**. It highlights the cheapest matching morning fare **separately** from the all-day lowest fare and uses an alert target of **€25**. Timings and the week deadline are configurable via `EARLY_START_HOUR`, `EARLY_END_HOUR`, `END_DATE`, and `SCAN_DAYS`.
+
+The GitHub Action checks twice daily (05:15 and 17:15 UTC), and also after relevant code changes. Once the trip window ends it exits without querying MÁV. Optional Telegram delivery still requires repository secrets; a separate ChatGPT condition watch can provide notifications independently. This is rule-based tool orchestration, **not yet an LLM-powered agent**. All observed fares are unofficial quotes, not reservations.
