@@ -1,7 +1,53 @@
 # Budapest → Vienna fare check
-Checked: 2026-11-01T13:00:46.921Z · Mode: **LIVE** · Coverage: 14 day(s), 14 query day(s)
+Checked: 2026-11-01T13:07:17.846Z · Mode: **LIVE** · Coverage: 14 day(s), 14 query day(s)
 **Provider:** MÁV pricing interface (via the unofficial `mav-prices` package). ÖBB/RegioJet not integrated.
 
-**No verified offers returned.** Do not interpret this as sold out or free travel.
+**Lowest observed MÁV fare: €13.00** · 2026-11-03 · 3 Nov 2026, 20:30 → 3 Nov 2026, 23:20 · Budapest-Keleti → Wien Hbf
+
+Book / verify: https://jegy.mav.hu/
+
+Alert threshold: €15.00 — **MATCH**
+
+| Date | Departure (Budapest time) | Arrival | Price | Changes |
+|---|---|---|---:|---:|
+| 2026-11-03 | 3 Nov 2026, 20:30 | 3 Nov 2026, 23:20 | €13.00 | 0 |
+| 2026-11-04 | 4 Nov 2026, 20:30 | 4 Nov 2026, 23:20 | €13.00 | 0 |
+| 2026-11-06 | 6 Nov 2026, 20:30 | 6 Nov 2026, 23:20 | €13.00 | 0 |
+| 2026-11-07 | 7 Nov 2026, 18:30 | 7 Nov 2026, 21:20 | €13.00 | 0 |
+| 2026-11-08 | 8 Nov 2026, 20:30 | 8 Nov 2026, 23:20 | €13.00 | 0 |
+| 2026-11-10 | 10 Nov 2026, 14:55 | 10 Nov 2026, 17:20 | €13.00 | 0 |
+| 2026-11-10 | 10 Nov 2026, 16:30 | 10 Nov 2026, 19:20 | €13.00 | 0 |
+| 2026-11-10 | 10 Nov 2026, 18:30 | 10 Nov 2026, 21:20 | €13.00 | 0 |
+| 2026-11-10 | 10 Nov 2026, 20:30 | 10 Nov 2026, 23:20 | €13.00 | 0 |
+| 2026-11-11 | 11 Nov 2026, 14:55 | 11 Nov 2026, 17:20 | €13.00 | 0 |
+| 2026-11-11 | 11 Nov 2026, 20:30 | 11 Nov 2026, 23:20 | €13.00 | 0 |
+| 2026-11-12 | 12 Nov 2026, 18:30 | 12 Nov 2026, 21:20 | €13.00 | 0 |
+| 2026-11-12 | 12 Nov 2026, 20:30 | 12 Nov 2026, 23:20 | €13.00 | 0 |
+| 2026-11-13 | 13 Nov 2026, 20:30 | 13 Nov 2026, 23:20 | €13.00 | 0 |
+| 2026-11-14 | 14 Nov 2026, 14:55 | 14 Nov 2026, 17:20 | €13.00 | 0 |
+| 2026-11-14 | 14 Nov 2026, 18:30 | 14 Nov 2026, 21:20 | €13.00 | 0 |
+| 2026-11-14 | 14 Nov 2026, 20:30 | 14 Nov 2026, 23:20 | €13.00 | 0 |
+| 2026-11-10 | 10 Nov 2026, 14:55 | 10 Nov 2026, 17:20 | €15.00 | 0 |
+| 2026-11-11 | 11 Nov 2026, 14:55 | 11 Nov 2026, 17:20 | €15.00 | 0 |
+| 2026-11-14 | 14 Nov 2026, 14:55 | 14 Nov 2026, 17:20 | €15.00 | 0 |
+
+## Daily coverage
+
+| Date | Lowest fare | Windows checked | Returned / filtered |
+|---|---:|---:|---:|
+| 2026-11-01 | €41.00 | 3/3 | 25 / 12 |
+| 2026-11-02 | €20.00 | 3/3 | 26 / 0 |
+| 2026-11-03 | €13.00 | 3/3 | 26 / 0 |
+| 2026-11-04 | €13.00 | 3/3 | 26 / 0 |
+| 2026-11-05 | €17.00 | 3/3 | 26 / 0 |
+| 2026-11-06 | €13.00 | 3/3 | 24 / 1 |
+| 2026-11-07 | €13.00 | 3/3 | 24 / 1 |
+| 2026-11-08 | €13.00 | 3/3 | 26 / 0 |
+| 2026-11-09 | €17.00 | 3/3 | 26 / 0 |
+| 2026-11-10 | €13.00 | 3/3 | 26 / 0 |
+| 2026-11-11 | €13.00 | 3/3 | 26 / 0 |
+| 2026-11-12 | €13.00 | 3/3 | 26 / 0 |
+| 2026-11-13 | €13.00 | 3/3 | 24 / 1 |
+| 2026-11-14 | €13.00 | 3/3 | 24 / 1 |
 
 > These are quotes from an unofficial interface, not confirmed availability until checkout. Seat reservation, payment conversion, and optional fees may change the final total. Demo results are fictitious.
