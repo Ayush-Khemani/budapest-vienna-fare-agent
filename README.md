@@ -6,7 +6,7 @@ A **GitHub Actions-based train fare monitoring agent** that searches ticket pric
 
 ## How it works
 
-1. GitHub Actions runs the script each day (scheduled 07:15 UTC; 08:15 CET / 09:15 CEST), or manually with **Actions → Check Budapest–Vienna train fares → Run workflow**.
+1. GitHub Actions runs the script twice daily (scheduled 05:15 and 17:15 UTC), or manually with **Actions → Check Budapest–Vienna train fares → Run workflow**.
 2. The agent uses the open-source [`mav-prices`](https://github.com/MartinLangbecker/mav-prices) library to ask MÁV's **unofficial** booking interface for offers on upcoming dates.
 3. EUR fares are validated, sorted, and deduplicated.
 4. The latest report is saved in `REPORT.md`, `data/latest.json`, `docs/index.html`, and history is appended to `data/history.json`.
@@ -31,7 +31,7 @@ To validate locally *without contacting MÁV*, run `npm run demo`. Demo prices a
 ## Set up on your GitHub account
 
 1. Open [Actions](https://github.com/Ayush-Khemani/budapest-vienna-fare-agent/actions/workflows/fare-check.yml) and choose **Run workflow**.
-2. Set a first travel date, number of days, passenger age and whether to search direct trains only. Blank start date means today. Scheduled runs use one adult aged 30 and 14 days.
+2. Set a first travel date, number of days, passenger age and whether to search direct trains only. Blank start date means today. Scheduled runs use one adult aged 22 and up to 8 days, through 8 November 2026.
 3. Read [the latest report](REPORT.md). Every date shows its lowest fare and how many search windows succeeded. An empty run fails visibly; error reports are still saved.
 4. The daily schedule runs automatically from the default branch.
 

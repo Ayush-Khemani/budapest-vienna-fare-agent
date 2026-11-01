@@ -51,7 +51,7 @@ jobs:
           EARLY_END_HOUR: '9'
           START_DATE: ${{ inputs.start_date }}
           PASSENGER_AGE: ${{ inputs.passenger_age || '22' }}
-          DIRECT_ONLY: ${{ inputs.direct_only == false && 'false' || 'true' }}
+          DIRECT_ONLY: ${{ github.event_name != 'workflow_dispatch' || inputs.direct_only }}
           PAUSE_MS: '1800'
           ALERT_BELOW_EUR: '25'
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}

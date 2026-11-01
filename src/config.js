@@ -10,7 +10,7 @@ const numberFromEnv = (key, defaultValue, min, max) => {
 
 export const config = {
   startDate: process.env.START_DATE || budapestDate(),
-  age: numberFromEnv('PASSENGER_AGE', 30, 1, 99),
+  age: numberFromEnv('PASSENGER_AGE', 22, 1, 99),
   directOnly: process.env.DIRECT_ONLY !== 'false',
   earlyStartHour: numberFromEnv('EARLY_START_HOUR', 5, 0, 23),
   earlyEndHour: numberFromEnv('EARLY_END_HOUR', 9, 1, 24),
@@ -19,7 +19,7 @@ export const config = {
   toCode: process.env.TO_CODE || '008101003', // Wien Hbf
   days: numberFromEnv('SCAN_DAYS', 14, 1, 60),
   pauseMs: numberFromEnv('PAUSE_MS', 1800, 0, 60000),
-  thresholdEur: Number(process.env.ALERT_BELOW_EUR ?? 15),
+  thresholdEur: Number(process.env.ALERT_BELOW_EUR ?? 25),
   mode: process.env.DEMO_MODE === '1' ? 'demo' : 'live',
   bookingUrl: 'https://jegy.mav.hu/'
 };
