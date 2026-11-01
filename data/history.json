@@ -14,5 +14,13 @@
     "date": "2026-11-03",
     "scanned": 14,
     "successful": 14
+  },
+  {
+    "checkedAt": "2026-11-01T13:24:31.119Z",
+    "mode": "live",
+    "amount": 13,
+    "date": "2026-11-03",
+    "scanned": 14,
+    "successful": 14
   }
 ]
