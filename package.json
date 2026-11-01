@@ -1,0 +1,16 @@
+{
+  "name": "budapest-vienna-fare-agent",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A scheduled GitHub Actions agent to track Budapest to Vienna rail fares through MÁV",
+  "scripts": {
+    "check": "node src/index.js",
+    "test": "node --test tests/*.test.js",
+    "demo": "DEMO_MODE=1 node src/index.js"
+  },
+  "dependencies": {
+    "mav-prices": "0.7.0"
+  },
+  "engines": { "node": ">=20" }
+}
