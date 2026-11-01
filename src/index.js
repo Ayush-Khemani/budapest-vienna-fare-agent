@@ -2,6 +2,7 @@ import { collectDate } from './collector.js';
 import { readFile } from 'node:fs/promises';
 import { notificationReason, sendTelegram } from './notifier.js';
 import { resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { config } from './config.js';
 import { datesToScan } from './dates.js';
 import { rankOffers } from './normalize.js';
@@ -45,7 +46,7 @@ async function main() {
     daily, status: !ranked.length ? 'unavailable' : errors.length ? 'partial' : 'ok',
     best:ranked[0] || null, top:ranked.slice(0,20), totalOffers:ranked.length, errors
   };
-  const root = resolve(new URL('..',import.meta.url).pathname);
+  const root = fileURLToPath(new URL('..', import.meta.url));
   // Never use demo results to trigger real notifications or compare against live history.
   if (config.mode === 'live' && data.best) {
     let previousPrice = null;
