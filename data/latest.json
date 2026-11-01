@@ -1,0 +1,19 @@
+{
+  "checkedAt": "2026-11-01T13:00:46.921Z",
+  "mode": "live",
+  "route": "Budapest → Vienna",
+  "parameters": {
+    "fromCode": "005510009",
+    "toCode": "008103000",
+    "class": 2,
+    "passengers": 1,
+    "days": 14
+  },
+  "thresholdEur": 15,
+  "datesAttempted": 14,
+  "datesSuccessful": 14,
+  "best": null,
+  "top": [],
+  "totalOffers": 0,
+  "errors": []
+}

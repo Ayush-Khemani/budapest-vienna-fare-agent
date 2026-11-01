@@ -1,1 +1,10 @@
-[]
+[
+  {
+    "checkedAt": "2026-11-01T13:00:46.921Z",
+    "mode": "live",
+    "amount": null,
+    "date": null,
+    "scanned": 14,
+    "successful": 14
+  }
+]
