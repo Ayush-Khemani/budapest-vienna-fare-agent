@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-01T13:24:31.119Z",
+  "checkedAt": "2026-11-01T13:48:36.306Z",
   "mode": "live",
   "route": "Budapest → Vienna",
   "parameters": {
@@ -7,22 +7,681 @@
     "toCode": "008101003",
     "class": 2,
     "passengers": 1,
-    "days": 14
+    "days": 8,
+    "age": 22,
+    "directOnly": true
   },
-  "thresholdEur": 15,
-  "datesAttempted": 14,
-  "datesSuccessful": 14,
+  "preferences": {
+    "departureStartHour": 5,
+    "departureEndHour": 9,
+    "endDate": "2026-11-08",
+    "directOnly": true
+  },
+  "bestPreferred": {
+    "source": "MÁV via mav-prices (unofficial API)",
+    "checkedAt": "2026-11-01T13:48:36.306Z",
+    "date": "2026-11-02",
+    "departure": "2026-11-02T06:54:00+01:00",
+    "arrival": "2026-11-02T09:28:00+01:00",
+    "from": "Budapest-Kelenföld",
+    "to": "Wien Hbf",
+    "fareName": "START Europa AT",
+    "amount": 20,
+    "currency": "EUR",
+    "changes": 0,
+    "trains": [
+      "EC 346"
+    ],
+    "bookingUrl": "https://jegy.mav.hu/",
+    "reservationIncluded": null
+  },
+  "preferredTop": [
+    {
+      "source": "MÁV via mav-prices (unofficial API)",
+      "checkedAt": "2026-11-01T13:48:36.306Z",
+      "date": "2026-11-02",
+      "departure": "2026-11-02T06:54:00+01:00",
+      "arrival": "2026-11-02T09:28:00+01:00",
+      "from": "Budapest-Kelenföld",
+      "to": "Wien Hbf",
+      "fareName": "START Europa AT",
+      "amount": 20,
+      "currency": "EUR",
+      "changes": 0,
+      "trains": [
+        "EC 346"
+      ],
+      "bookingUrl": "https://jegy.mav.hu/",
+      "reservationIncluded": null
+    },
+    {
+      "source": "MÁV via mav-prices (unofficial API)",
+      "checkedAt": "2026-11-01T13:48:36.306Z",
+      "date": "2026-11-03",
+      "departure": "2026-11-03T06:54:00+01:00",
+      "arrival": "2026-11-03T09:28:00+01:00",
+      "from": "Budapest-Kelenföld",
+      "to": "Wien Hbf",
+      "fareName": "START Europa AT",
+      "amount": 20,
+      "currency": "EUR",
+      "changes": 0,
+      "trains": [
+        "EC 346"
+      ],
+      "bookingUrl": "https://jegy.mav.hu/",
+      "reservationIncluded": null
+    },
+    {
+      "source": "MÁV via mav-prices (unofficial API)",
+      "checkedAt": "2026-11-01T13:48:36.306Z",
+      "date": "2026-11-05",
+      "departure": "2026-11-05T06:54:00+01:00",
+      "arrival": "2026-11-05T09:28:00+01:00",
+      "from": "Budapest-Kelenföld",
+      "to": "Wien Hbf",
+      "fareName": "START Europa AT",
+      "amount": 20,
+      "currency": "EUR",
+      "changes": 0,
+      "trains": [
+        "EC 346"
+      ],
+      "bookingUrl": "https://jegy.mav.hu/",
+      "reservationIncluded": null
+    },
+    {
+      "source": "MÁV via mav-prices (unofficial API)",
+      "checkedAt": "2026-11-01T13:48:36.306Z",
+      "date": "2026-11-06",
+      "departure": "2026-11-06T06:54:00+01:00",
+      "arrival": "2026-11-06T09:28:00+01:00",
+      "from": "Budapest-Kelenföld",
+      "to": "Wien Hbf",
+      "fareName": "START Europa AT",
+      "amount": 20,
+      "currency": "EUR",
+      "changes": 0,
+      "trains": [
+        "EC 346"
+      ],
+      "bookingUrl": "https://jegy.mav.hu/",
+      "reservationIncluded": null
+    },
+    {
+      "source": "MÁV via mav-prices (unofficial API)",
+      "checkedAt": "2026-11-01T13:48:36.306Z",
+      "date": "2026-11-08",
+      "departure": "2026-11-08T06:54:00+01:00",
+      "arrival": "2026-11-08T09:28:00+01:00",
+      "from": "Budapest-Kelenföld",
+      "to": "Wien Hbf",
+      "fareName": "START Europa AT",
+      "amount": 20,
+      "currency": "EUR",
+      "changes": 0,
+      "trains": [
+        "EC 346"
+      ],
+      "bookingUrl": "https://jegy.mav.hu/",
+      "reservationIncluded": null
+    },
+    {
+      "source": "MÁV via mav-prices (unofficial API)",
+      "checkedAt": "2026-11-01T13:48:36.306Z",
+      "date": "2026-11-05",
+      "departure": "2026-11-05T05:30:00+01:00",
+      "arrival": "2026-11-05T08:20:00+01:00",
+      "from": "Budapest-Keleti",
+      "to": "Wien Hbf",
+      "fareName": "START Europa AT",
+      "amount": 21,
+      "currency": "EUR",
+      "changes": 0,
+      "trains": [
+        "EC 342"
+      ],
+      "bookingUrl": "https://jegy.mav.hu/",
+      "reservationIncluded": null
+    },
+    {
+      "source": "MÁV via mav-prices (unofficial API)",
+      "checkedAt": "2026-11-01T13:48:36.306Z",
+      "date": "2026-11-05",
+      "departure": "2026-11-05T06:30:00+01:00",
+      "arrival": "2026-11-05T09:18:00+01:00",
+      "from": "Budapest-Keleti",
+      "to": "Wien Hbf",
+      "fareName": "START Europa AT",
+      "amount": 21,
+      "currency": "EUR",
+      "changes": 0,
+      "trains": [
+        "rjx 162"
+      ],
+      "bookingUrl": "https://jegy.mav.hu/",
+      "reservationIncluded": null
+    },
+    {
+      "source": "MÁV via mav-prices (unofficial API)",
+      "checkedAt": "2026-11-01T13:48:36.306Z",
+      "date": "2026-11-06",
+      "departure": "2026-11-06T05:30:00+01:00",
+      "arrival": "2026-11-06T08:20:00+01:00",
+      "from": "Budapest-Keleti",
+      "to": "Wien Hbf",
+      "fareName": "START Europa AT",
+      "amount": 21,
+      "currency": "EUR",
+      "changes": 0,
+      "trains": [
+        "EC 342"
+      ],
+      "bookingUrl": "https://jegy.mav.hu/",
+      "reservationIncluded": null
+    },
+    {
+      "source": "MÁV via mav-prices (unofficial API)",
+      "checkedAt": "2026-11-01T13:48:36.306Z",
+      "date": "2026-11-08",
+      "departure": "2026-11-08T05:30:00+01:00",
+      "arrival": "2026-11-08T08:20:00+01:00",
+      "from": "Budapest-Keleti",
+      "to": "Wien Hbf",
+      "fareName": "START Europa AT",
+      "amount": 21,
+      "currency": "EUR",
+      "changes": 0,
+      "trains": [
+        "EC 342"
+      ],
+      "bookingUrl": "https://jegy.mav.hu/",
+      "reservationIncluded": null
+    },
+    {
+      "source": "MÁV via mav-prices (unofficial API)",
+      "checkedAt": "2026-11-01T13:48:36.306Z",
+      "date": "2026-11-08",
+      "departure": "2026-11-08T06:30:00+01:00",
+      "arrival": "2026-11-08T09:18:00+01:00",
+      "from": "Budapest-Keleti",
+      "to": "Wien Hbf",
+      "fareName": "START Europa AT",
+      "amount": 21,
+      "currency": "EUR",
+      "changes": 0,
+      "trains": [
+        "rjx 162"
+      ],
+      "bookingUrl": "https://jegy.mav.hu/",
+      "reservationIncluded": null
+    },
+    {
+      "source": "MÁV via mav-prices (unofficial API)",
+      "checkedAt": "2026-11-01T13:48:36.306Z",
+      "date": "2026-11-08",
+      "departure": "2026-11-08T07:30:00+01:00",
+      "arrival": "2026-11-08T10:20:00+01:00",
+      "from": "Budapest-Keleti",
+      "to": "Wien Hbf",
+      "fareName": "START Europa AT",
+      "amount": 21,
+      "currency": "EUR",
+      "changes": 0,
+      "trains": [
+        "rjx 60"
+      ],
+      "bookingUrl": "https://jegy.mav.hu/",
+      "reservationIncluded": null
+    },
+    {
+      "source": "MÁV via mav-prices (unofficial API)",
+      "checkedAt": "2026-11-01T13:48:36.306Z",
+      "date": "2026-11-07",
+      "departure": "2026-11-07T06:54:00+01:00",
+      "arrival": "2026-11-07T09:28:00+01:00",
+      "from": "Budapest-Kelenföld",
+      "to": "Wien Hbf",
+      "fareName": "START Europa AT",
+      "amount": 24,
+      "currency": "EUR",
+      "changes": 0,
+      "trains": [
+        "EC 346"
+      ],
+      "bookingUrl": "https://jegy.mav.hu/",
+      "reservationIncluded": null
+    },
+    {
+      "source": "MÁV via mav-prices (unofficial API)",
+      "checkedAt": "2026-11-01T13:48:36.306Z",
+      "date": "2026-11-03",
+      "departure": "2026-11-03T05:30:00+01:00",
+      "arrival": "2026-11-03T08:20:00+01:00",
+      "from": "Budapest-Keleti",
+      "to": "Wien Hbf",
+      "fareName": "START Europa AT",
+      "amount": 25,
+      "currency": "EUR",
+      "changes": 0,
+      "trains": [
+        "EC 342"
+      ],
+      "bookingUrl": "https://jegy.mav.hu/",
+      "reservationIncluded": null
+    },
+    {
+      "source": "MÁV via mav-prices (unofficial API)",
+      "checkedAt": "2026-11-01T13:48:36.306Z",
+      "date": "2026-11-03",
+      "departure": "2026-11-03T08:30:00+01:00",
+      "arrival": "2026-11-03T11:20:00+01:00",
+      "from": "Budapest-Keleti",
+      "to": "Wien Hbf",
+      "fareName": "START Europa AT",
+      "amount": 25,
+      "currency": "EUR",
+      "changes": 0,
+      "trains": [
+        "EC 140"
+      ],
+      "bookingUrl": "https://jegy.mav.hu/",
+      "reservationIncluded": null
+    },
+    {
+      "source": "MÁV via mav-prices (unofficial API)",
+      "checkedAt": "2026-11-01T13:48:36.306Z",
+      "date": "2026-11-04",
+      "departure": "2026-11-04T05:30:00+01:00",
+      "arrival": "2026-11-04T08:20:00+01:00",
+      "from": "Budapest-Keleti",
+      "to": "Wien Hbf",
+      "fareName": "START Europa AT",
+      "amount": 25,
+      "currency": "EUR",
+      "changes": 0,
+      "trains": [
+        "EC 342"
+      ],
+      "bookingUrl": "https://jegy.mav.hu/",
+      "reservationIncluded": null
+    },
+    {
+      "source": "MÁV via mav-prices (unofficial API)",
+      "checkedAt": "2026-11-01T13:48:36.306Z",
+      "date": "2026-11-04",
+      "departure": "2026-11-04T08:30:00+01:00",
+      "arrival": "2026-11-04T11:20:00+01:00",
+      "from": "Budapest-Keleti",
+      "to": "Wien Hbf",
+      "fareName": "START Europa AT",
+      "amount": 25,
+      "currency": "EUR",
+      "changes": 0,
+      "trains": [
+        "EC 140"
+      ],
+      "bookingUrl": "https://jegy.mav.hu/",
+      "reservationIncluded": null
+    },
+    {
+      "source": "MÁV via mav-prices (unofficial API)",
+      "checkedAt": "2026-11-01T13:48:36.306Z",
+      "date": "2026-11-05",
+      "departure": "2026-11-05T07:30:00+01:00",
+      "arrival": "2026-11-05T10:20:00+01:00",
+      "from": "Budapest-Keleti",
+      "to": "Wien Hbf",
+      "fareName": "START Europa AT",
+      "amount": 25,
+      "currency": "EUR",
+      "changes": 0,
+      "trains": [
+        "rjx 60"
+      ],
+      "bookingUrl": "https://jegy.mav.hu/",
+      "reservationIncluded": null
+    },
+    {
+      "source": "MÁV via mav-prices (unofficial API)",
+      "checkedAt": "2026-11-01T13:48:36.306Z",
+      "date": "2026-11-06",
+      "departure": "2026-11-06T08:30:00+01:00",
+      "arrival": "2026-11-06T11:20:00+01:00",
+      "from": "Budapest-Keleti",
+      "to": "Wien Hbf",
+      "fareName": "START Europa AT",
+      "amount": 25,
+      "currency": "EUR",
+      "changes": 0,
+      "trains": [
+        "EC 140"
+      ],
+      "bookingUrl": "https://jegy.mav.hu/",
+      "reservationIncluded": null
+    },
+    {
+      "source": "MÁV via mav-prices (unofficial API)",
+      "checkedAt": "2026-11-01T13:48:36.306Z",
+      "date": "2026-11-07",
+      "departure": "2026-11-07T08:30:00+01:00",
+      "arrival": "2026-11-07T11:20:00+01:00",
+      "from": "Budapest-Keleti",
+      "to": "Wien Hbf",
+      "fareName": "START Europa AT",
+      "amount": 25,
+      "currency": "EUR",
+      "changes": 0,
+      "trains": [
+        "EC 140"
+      ],
+      "bookingUrl": "https://jegy.mav.hu/",
+      "reservationIncluded": null
+    },
+    {
+      "source": "MÁV via mav-prices (unofficial API)",
+      "checkedAt": "2026-11-01T13:48:36.306Z",
+      "date": "2026-11-08",
+      "departure": "2026-11-08T08:30:00+01:00",
+      "arrival": "2026-11-08T11:20:00+01:00",
+      "from": "Budapest-Keleti",
+      "to": "Wien Hbf",
+      "fareName": "START Europa AT",
+      "amount": 25,
+      "currency": "EUR",
+      "changes": 0,
+      "trains": [
+        "EC 140"
+      ],
+      "bookingUrl": "https://jegy.mav.hu/",
+      "reservationIncluded": null
+    },
+    {
+      "source": "MÁV via mav-prices (unofficial API)",
+      "checkedAt": "2026-11-01T13:48:36.306Z",
+      "date": "2026-11-04",
+      "departure": "2026-11-04T06:54:00+01:00",
+      "arrival": "2026-11-04T09:28:00+01:00",
+      "from": "Budapest-Kelenföld",
+      "to": "Wien Hbf",
+      "fareName": "START Europa AT",
+      "amount": 28,
+      "currency": "EUR",
+      "changes": 0,
+      "trains": [
+        "EC 346"
+      ],
+      "bookingUrl": "https://jegy.mav.hu/",
+      "reservationIncluded": null
+    },
+    {
+      "source": "MÁV via mav-prices (unofficial API)",
+      "checkedAt": "2026-11-01T13:48:36.306Z",
+      "date": "2026-11-02",
+      "departure": "2026-11-02T05:30:00+01:00",
+      "arrival": "2026-11-02T08:20:00+01:00",
+      "from": "Budapest-Keleti",
+      "to": "Wien Hbf",
+      "fareName": "START Europa AT",
+      "amount": 29,
+      "currency": "EUR",
+      "changes": 0,
+      "trains": [
+        "EC 342"
+      ],
+      "bookingUrl": "https://jegy.mav.hu/",
+      "reservationIncluded": null
+    },
+    {
+      "source": "MÁV via mav-prices (unofficial API)",
+      "checkedAt": "2026-11-01T13:48:36.306Z",
+      "date": "2026-11-02",
+      "departure": "2026-11-02T06:30:00+01:00",
+      "arrival": "2026-11-02T09:18:00+01:00",
+      "from": "Budapest-Keleti",
+      "to": "Wien Hbf",
+      "fareName": "START Europa AT",
+      "amount": 29,
+      "currency": "EUR",
+      "changes": 0,
+      "trains": [
+        "rjx 162"
+      ],
+      "bookingUrl": "https://jegy.mav.hu/",
+      "reservationIncluded": null
+    },
+    {
+      "source": "MÁV via mav-prices (unofficial API)",
+      "checkedAt": "2026-11-01T13:48:36.306Z",
+      "date": "2026-11-02",
+      "departure": "2026-11-02T07:30:00+01:00",
+      "arrival": "2026-11-02T10:20:00+01:00",
+      "from": "Budapest-Keleti",
+      "to": "Wien Hbf",
+      "fareName": "START Europa AT",
+      "amount": 29,
+      "currency": "EUR",
+      "changes": 0,
+      "trains": [
+        "rjx 60"
+      ],
+      "bookingUrl": "https://jegy.mav.hu/",
+      "reservationIncluded": null
+    },
+    {
+      "source": "MÁV via mav-prices (unofficial API)",
+      "checkedAt": "2026-11-01T13:48:36.306Z",
+      "date": "2026-11-02",
+      "departure": "2026-11-02T08:30:00+01:00",
+      "arrival": "2026-11-02T11:20:00+01:00",
+      "from": "Budapest-Keleti",
+      "to": "Wien Hbf",
+      "fareName": "START Europa AT",
+      "amount": 29,
+      "currency": "EUR",
+      "changes": 0,
+      "trains": [
+        "EC 140"
+      ],
+      "bookingUrl": "https://jegy.mav.hu/",
+      "reservationIncluded": null
+    },
+    {
+      "source": "MÁV via mav-prices (unofficial API)",
+      "checkedAt": "2026-11-01T13:48:36.306Z",
+      "date": "2026-11-03",
+      "departure": "2026-11-03T06:30:00+01:00",
+      "arrival": "2026-11-03T09:18:00+01:00",
+      "from": "Budapest-Keleti",
+      "to": "Wien Hbf",
+      "fareName": "START Europa AT",
+      "amount": 29,
+      "currency": "EUR",
+      "changes": 0,
+      "trains": [
+        "rjx 162"
+      ],
+      "bookingUrl": "https://jegy.mav.hu/",
+      "reservationIncluded": null
+    },
+    {
+      "source": "MÁV via mav-prices (unofficial API)",
+      "checkedAt": "2026-11-01T13:48:36.306Z",
+      "date": "2026-11-03",
+      "departure": "2026-11-03T07:30:00+01:00",
+      "arrival": "2026-11-03T10:20:00+01:00",
+      "from": "Budapest-Keleti",
+      "to": "Wien Hbf",
+      "fareName": "START Europa AT",
+      "amount": 29,
+      "currency": "EUR",
+      "changes": 0,
+      "trains": [
+        "rjx 60"
+      ],
+      "bookingUrl": "https://jegy.mav.hu/",
+      "reservationIncluded": null
+    },
+    {
+      "source": "MÁV via mav-prices (unofficial API)",
+      "checkedAt": "2026-11-01T13:48:36.306Z",
+      "date": "2026-11-04",
+      "departure": "2026-11-04T07:30:00+01:00",
+      "arrival": "2026-11-04T10:20:00+01:00",
+      "from": "Budapest-Keleti",
+      "to": "Wien Hbf",
+      "fareName": "START Europa AT",
+      "amount": 29,
+      "currency": "EUR",
+      "changes": 0,
+      "trains": [
+        "rjx 60"
+      ],
+      "bookingUrl": "https://jegy.mav.hu/",
+      "reservationIncluded": null
+    },
+    {
+      "source": "MÁV via mav-prices (unofficial API)",
+      "checkedAt": "2026-11-01T13:48:36.306Z",
+      "date": "2026-11-05",
+      "departure": "2026-11-05T08:30:00+01:00",
+      "arrival": "2026-11-05T11:20:00+01:00",
+      "from": "Budapest-Keleti",
+      "to": "Wien Hbf",
+      "fareName": "START Europa AT",
+      "amount": 29,
+      "currency": "EUR",
+      "changes": 0,
+      "trains": [
+        "EC 140"
+      ],
+      "bookingUrl": "https://jegy.mav.hu/",
+      "reservationIncluded": null
+    },
+    {
+      "source": "MÁV via mav-prices (unofficial API)",
+      "checkedAt": "2026-11-01T13:48:36.306Z",
+      "date": "2026-11-06",
+      "departure": "2026-11-06T06:30:00+01:00",
+      "arrival": "2026-11-06T09:18:00+01:00",
+      "from": "Budapest-Keleti",
+      "to": "Wien Hbf",
+      "fareName": "START Europa AT",
+      "amount": 29,
+      "currency": "EUR",
+      "changes": 0,
+      "trains": [
+        "rjx 162"
+      ],
+      "bookingUrl": "https://jegy.mav.hu/",
+      "reservationIncluded": null
+    },
+    {
+      "source": "MÁV via mav-prices (unofficial API)",
+      "checkedAt": "2026-11-01T13:48:36.306Z",
+      "date": "2026-11-06",
+      "departure": "2026-11-06T07:30:00+01:00",
+      "arrival": "2026-11-06T10:20:00+01:00",
+      "from": "Budapest-Keleti",
+      "to": "Wien Hbf",
+      "fareName": "START Europa AT",
+      "amount": 29,
+      "currency": "EUR",
+      "changes": 0,
+      "trains": [
+        "rjx 60"
+      ],
+      "bookingUrl": "https://jegy.mav.hu/",
+      "reservationIncluded": null
+    },
+    {
+      "source": "MÁV via mav-prices (unofficial API)",
+      "checkedAt": "2026-11-01T13:48:36.306Z",
+      "date": "2026-11-07",
+      "departure": "2026-11-07T05:30:00+01:00",
+      "arrival": "2026-11-07T08:20:00+01:00",
+      "from": "Budapest-Keleti",
+      "to": "Wien Hbf",
+      "fareName": "START Europa AT",
+      "amount": 29,
+      "currency": "EUR",
+      "changes": 0,
+      "trains": [
+        "EC 342"
+      ],
+      "bookingUrl": "https://jegy.mav.hu/",
+      "reservationIncluded": null
+    },
+    {
+      "source": "MÁV via mav-prices (unofficial API)",
+      "checkedAt": "2026-11-01T13:48:36.306Z",
+      "date": "2026-11-04",
+      "departure": "2026-11-04T06:30:00+01:00",
+      "arrival": "2026-11-04T09:18:00+01:00",
+      "from": "Budapest-Keleti",
+      "to": "Wien Hbf",
+      "fareName": "START Europa AT",
+      "amount": 33,
+      "currency": "EUR",
+      "changes": 0,
+      "trains": [
+        "rjx 162"
+      ],
+      "bookingUrl": "https://jegy.mav.hu/",
+      "reservationIncluded": null
+    },
+    {
+      "source": "MÁV via mav-prices (unofficial API)",
+      "checkedAt": "2026-11-01T13:48:36.306Z",
+      "date": "2026-11-07",
+      "departure": "2026-11-07T06:30:00+01:00",
+      "arrival": "2026-11-07T09:18:00+01:00",
+      "from": "Budapest-Keleti",
+      "to": "Wien Hbf",
+      "fareName": "START Europa AT",
+      "amount": 33,
+      "currency": "EUR",
+      "changes": 0,
+      "trains": [
+        "rjx 162"
+      ],
+      "bookingUrl": "https://jegy.mav.hu/",
+      "reservationIncluded": null
+    },
+    {
+      "source": "MÁV via mav-prices (unofficial API)",
+      "checkedAt": "2026-11-01T13:48:36.306Z",
+      "date": "2026-11-07",
+      "departure": "2026-11-07T07:30:00+01:00",
+      "arrival": "2026-11-07T10:20:00+01:00",
+      "from": "Budapest-Keleti",
+      "to": "Wien Hbf",
+      "fareName": "START Europa AT",
+      "amount": 33,
+      "currency": "EUR",
+      "changes": 0,
+      "trains": [
+        "rjx 60"
+      ],
+      "bookingUrl": "https://jegy.mav.hu/",
+      "reservationIncluded": null
+    }
+  ],
+  "preferredCount": 35,
+  "thresholdEur": 25,
+  "datesAttempted": 8,
+  "datesSuccessful": 8,
   "daily": [
     {
       "date": "2026-11-01",
       "windowsAttempted": 3,
       "windowsSuccessful": 3,
-      "returned": 25,
-      "rejected": 12,
+      "returned": 21,
+      "rejected": 11,
       "errors": [],
       "best": {
         "source": "MÁV via mav-prices (unofficial API)",
-        "checkedAt": "2026-11-01T13:24:31.119Z",
+        "checkedAt": "2026-11-01T13:48:36.306Z",
         "date": "2026-11-01",
         "departure": "2026-11-01T14:55:00+01:00",
         "arrival": "2026-11-01T17:20:00+01:00",
@@ -37,18 +696,37 @@
         ],
         "bookingUrl": "https://jegy.mav.hu/",
         "reservationIncluded": null
-      }
+      },
+      "preferredBest": null
     },
     {
       "date": "2026-11-02",
       "windowsAttempted": 3,
       "windowsSuccessful": 3,
-      "returned": 27,
-      "rejected": 1,
+      "returned": 22,
+      "rejected": 0,
       "errors": [],
       "best": {
         "source": "MÁV via mav-prices (unofficial API)",
-        "checkedAt": "2026-11-01T13:24:31.119Z",
+        "checkedAt": "2026-11-01T13:48:36.306Z",
+        "date": "2026-11-02",
+        "departure": "2026-11-02T06:54:00+01:00",
+        "arrival": "2026-11-02T09:28:00+01:00",
+        "from": "Budapest-Kelenföld",
+        "to": "Wien Hbf",
+        "fareName": "START Europa AT",
+        "amount": 20,
+        "currency": "EUR",
+        "changes": 0,
+        "trains": [
+          "EC 346"
+        ],
+        "bookingUrl": "https://jegy.mav.hu/",
+        "reservationIncluded": null
+      },
+      "preferredBest": {
+        "source": "MÁV via mav-prices (unofficial API)",
+        "checkedAt": "2026-11-01T13:48:36.306Z",
         "date": "2026-11-02",
         "departure": "2026-11-02T06:54:00+01:00",
         "arrival": "2026-11-02T09:28:00+01:00",
@@ -69,12 +747,12 @@
       "date": "2026-11-03",
       "windowsAttempted": 3,
       "windowsSuccessful": 3,
-      "returned": 27,
-      "rejected": 1,
+      "returned": 22,
+      "rejected": 0,
       "errors": [],
       "best": {
         "source": "MÁV via mav-prices (unofficial API)",
-        "checkedAt": "2026-11-01T13:24:31.119Z",
+        "checkedAt": "2026-11-01T13:48:36.306Z",
         "date": "2026-11-03",
         "departure": "2026-11-03T20:30:00+01:00",
         "arrival": "2026-11-03T23:20:00+01:00",
@@ -89,18 +767,36 @@
         ],
         "bookingUrl": "https://jegy.mav.hu/",
         "reservationIncluded": null
+      },
+      "preferredBest": {
+        "source": "MÁV via mav-prices (unofficial API)",
+        "checkedAt": "2026-11-01T13:48:36.306Z",
+        "date": "2026-11-03",
+        "departure": "2026-11-03T06:54:00+01:00",
+        "arrival": "2026-11-03T09:28:00+01:00",
+        "from": "Budapest-Kelenföld",
+        "to": "Wien Hbf",
+        "fareName": "START Europa AT",
+        "amount": 20,
+        "currency": "EUR",
+        "changes": 0,
+        "trains": [
+          "EC 346"
+        ],
+        "bookingUrl": "https://jegy.mav.hu/",
+        "reservationIncluded": null
       }
     },
     {
       "date": "2026-11-04",
       "windowsAttempted": 3,
       "windowsSuccessful": 3,
-      "returned": 27,
-      "rejected": 1,
+      "returned": 22,
+      "rejected": 0,
       "errors": [],
       "best": {
         "source": "MÁV via mav-prices (unofficial API)",
-        "checkedAt": "2026-11-01T13:24:31.119Z",
+        "checkedAt": "2026-11-01T13:48:36.306Z",
         "date": "2026-11-04",
         "departure": "2026-11-04T20:30:00+01:00",
         "arrival": "2026-11-04T23:20:00+01:00",
@@ -115,18 +811,36 @@
         ],
         "bookingUrl": "https://jegy.mav.hu/",
         "reservationIncluded": null
+      },
+      "preferredBest": {
+        "source": "MÁV via mav-prices (unofficial API)",
+        "checkedAt": "2026-11-01T13:48:36.306Z",
+        "date": "2026-11-04",
+        "departure": "2026-11-04T05:30:00+01:00",
+        "arrival": "2026-11-04T08:20:00+01:00",
+        "from": "Budapest-Keleti",
+        "to": "Wien Hbf",
+        "fareName": "START Europa AT",
+        "amount": 25,
+        "currency": "EUR",
+        "changes": 0,
+        "trains": [
+          "EC 342"
+        ],
+        "bookingUrl": "https://jegy.mav.hu/",
+        "reservationIncluded": null
       }
     },
     {
       "date": "2026-11-05",
       "windowsAttempted": 3,
       "windowsSuccessful": 3,
-      "returned": 26,
+      "returned": 22,
       "rejected": 0,
       "errors": [],
       "best": {
         "source": "MÁV via mav-prices (unofficial API)",
-        "checkedAt": "2026-11-01T13:24:31.119Z",
+        "checkedAt": "2026-11-01T13:48:36.306Z",
         "date": "2026-11-05",
         "departure": "2026-11-05T18:30:00+01:00",
         "arrival": "2026-11-05T21:20:00+01:00",
@@ -141,18 +855,36 @@
         ],
         "bookingUrl": "https://jegy.mav.hu/",
         "reservationIncluded": null
+      },
+      "preferredBest": {
+        "source": "MÁV via mav-prices (unofficial API)",
+        "checkedAt": "2026-11-01T13:48:36.306Z",
+        "date": "2026-11-05",
+        "departure": "2026-11-05T06:54:00+01:00",
+        "arrival": "2026-11-05T09:28:00+01:00",
+        "from": "Budapest-Kelenföld",
+        "to": "Wien Hbf",
+        "fareName": "START Europa AT",
+        "amount": 20,
+        "currency": "EUR",
+        "changes": 0,
+        "trains": [
+          "EC 346"
+        ],
+        "bookingUrl": "https://jegy.mav.hu/",
+        "reservationIncluded": null
       }
     },
     {
       "date": "2026-11-06",
       "windowsAttempted": 3,
       "windowsSuccessful": 3,
-      "returned": 24,
-      "rejected": 1,
+      "returned": 22,
+      "rejected": 0,
       "errors": [],
       "best": {
         "source": "MÁV via mav-prices (unofficial API)",
-        "checkedAt": "2026-11-01T13:24:31.119Z",
+        "checkedAt": "2026-11-01T13:48:36.306Z",
         "date": "2026-11-06",
         "departure": "2026-11-06T20:30:00+01:00",
         "arrival": "2026-11-06T23:20:00+01:00",
@@ -167,18 +899,36 @@
         ],
         "bookingUrl": "https://jegy.mav.hu/",
         "reservationIncluded": null
+      },
+      "preferredBest": {
+        "source": "MÁV via mav-prices (unofficial API)",
+        "checkedAt": "2026-11-01T13:48:36.306Z",
+        "date": "2026-11-06",
+        "departure": "2026-11-06T06:54:00+01:00",
+        "arrival": "2026-11-06T09:28:00+01:00",
+        "from": "Budapest-Kelenföld",
+        "to": "Wien Hbf",
+        "fareName": "START Europa AT",
+        "amount": 20,
+        "currency": "EUR",
+        "changes": 0,
+        "trains": [
+          "EC 346"
+        ],
+        "bookingUrl": "https://jegy.mav.hu/",
+        "reservationIncluded": null
       }
     },
     {
       "date": "2026-11-07",
       "windowsAttempted": 3,
       "windowsSuccessful": 3,
-      "returned": 24,
-      "rejected": 1,
+      "returned": 22,
+      "rejected": 0,
       "errors": [],
       "best": {
         "source": "MÁV via mav-prices (unofficial API)",
-        "checkedAt": "2026-11-01T13:24:31.119Z",
+        "checkedAt": "2026-11-01T13:48:36.306Z",
         "date": "2026-11-07",
         "departure": "2026-11-07T18:30:00+01:00",
         "arrival": "2026-11-07T21:20:00+01:00",
@@ -193,18 +943,36 @@
         ],
         "bookingUrl": "https://jegy.mav.hu/",
         "reservationIncluded": null
+      },
+      "preferredBest": {
+        "source": "MÁV via mav-prices (unofficial API)",
+        "checkedAt": "2026-11-01T13:48:36.306Z",
+        "date": "2026-11-07",
+        "departure": "2026-11-07T06:54:00+01:00",
+        "arrival": "2026-11-07T09:28:00+01:00",
+        "from": "Budapest-Kelenföld",
+        "to": "Wien Hbf",
+        "fareName": "START Europa AT",
+        "amount": 24,
+        "currency": "EUR",
+        "changes": 0,
+        "trains": [
+          "EC 346"
+        ],
+        "bookingUrl": "https://jegy.mav.hu/",
+        "reservationIncluded": null
       }
     },
     {
       "date": "2026-11-08",
       "windowsAttempted": 3,
       "windowsSuccessful": 3,
-      "returned": 26,
+      "returned": 22,
       "rejected": 0,
       "errors": [],
       "best": {
         "source": "MÁV via mav-prices (unofficial API)",
-        "checkedAt": "2026-11-01T13:24:31.119Z",
+        "checkedAt": "2026-11-01T13:48:36.306Z",
         "date": "2026-11-08",
         "departure": "2026-11-08T20:30:00+01:00",
         "arrival": "2026-11-08T23:20:00+01:00",
@@ -219,159 +987,21 @@
         ],
         "bookingUrl": "https://jegy.mav.hu/",
         "reservationIncluded": null
-      }
-    },
-    {
-      "date": "2026-11-09",
-      "windowsAttempted": 3,
-      "windowsSuccessful": 3,
-      "returned": 27,
-      "rejected": 1,
-      "errors": [],
-      "best": {
+      },
+      "preferredBest": {
         "source": "MÁV via mav-prices (unofficial API)",
-        "checkedAt": "2026-11-01T13:24:31.119Z",
-        "date": "2026-11-09",
-        "departure": "2026-11-09T14:55:00+01:00",
-        "arrival": "2026-11-09T17:20:00+01:00",
+        "checkedAt": "2026-11-01T13:48:36.306Z",
+        "date": "2026-11-08",
+        "departure": "2026-11-08T06:54:00+01:00",
+        "arrival": "2026-11-08T09:28:00+01:00",
         "from": "Budapest-Kelenföld",
         "to": "Wien Hbf",
         "fareName": "START Europa AT",
-        "amount": 17,
+        "amount": 20,
         "currency": "EUR",
         "changes": 0,
         "trains": [
-          "EC 146"
-        ],
-        "bookingUrl": "https://jegy.mav.hu/",
-        "reservationIncluded": null
-      }
-    },
-    {
-      "date": "2026-11-10",
-      "windowsAttempted": 3,
-      "windowsSuccessful": 3,
-      "returned": 27,
-      "rejected": 1,
-      "errors": [],
-      "best": {
-        "source": "MÁV via mav-prices (unofficial API)",
-        "checkedAt": "2026-11-01T13:24:31.119Z",
-        "date": "2026-11-10",
-        "departure": "2026-11-10T14:55:00+01:00",
-        "arrival": "2026-11-10T17:20:00+01:00",
-        "from": "Budapest-Kelenföld",
-        "to": "Wien Hbf",
-        "fareName": "START Europa AT",
-        "amount": 13,
-        "currency": "EUR",
-        "changes": 0,
-        "trains": [
-          "EC 146"
-        ],
-        "bookingUrl": "https://jegy.mav.hu/",
-        "reservationIncluded": null
-      }
-    },
-    {
-      "date": "2026-11-11",
-      "windowsAttempted": 3,
-      "windowsSuccessful": 3,
-      "returned": 26,
-      "rejected": 0,
-      "errors": [],
-      "best": {
-        "source": "MÁV via mav-prices (unofficial API)",
-        "checkedAt": "2026-11-01T13:24:31.119Z",
-        "date": "2026-11-11",
-        "departure": "2026-11-11T14:55:00+01:00",
-        "arrival": "2026-11-11T17:20:00+01:00",
-        "from": "Budapest-Kelenföld",
-        "to": "Wien Hbf",
-        "fareName": "START Europa AT",
-        "amount": 13,
-        "currency": "EUR",
-        "changes": 0,
-        "trains": [
-          "EC 146"
-        ],
-        "bookingUrl": "https://jegy.mav.hu/",
-        "reservationIncluded": null
-      }
-    },
-    {
-      "date": "2026-11-12",
-      "windowsAttempted": 3,
-      "windowsSuccessful": 3,
-      "returned": 26,
-      "rejected": 0,
-      "errors": [],
-      "best": {
-        "source": "MÁV via mav-prices (unofficial API)",
-        "checkedAt": "2026-11-01T13:24:31.119Z",
-        "date": "2026-11-12",
-        "departure": "2026-11-12T18:30:00+01:00",
-        "arrival": "2026-11-12T21:20:00+01:00",
-        "from": "Budapest-Keleti",
-        "to": "Wien Hbf",
-        "fareName": "START Europa AT",
-        "amount": 13,
-        "currency": "EUR",
-        "changes": 0,
-        "trains": [
-          "EC 340"
-        ],
-        "bookingUrl": "https://jegy.mav.hu/",
-        "reservationIncluded": null
-      }
-    },
-    {
-      "date": "2026-11-13",
-      "windowsAttempted": 3,
-      "windowsSuccessful": 3,
-      "returned": 24,
-      "rejected": 1,
-      "errors": [],
-      "best": {
-        "source": "MÁV via mav-prices (unofficial API)",
-        "checkedAt": "2026-11-01T13:24:31.119Z",
-        "date": "2026-11-13",
-        "departure": "2026-11-13T20:30:00+01:00",
-        "arrival": "2026-11-13T23:20:00+01:00",
-        "from": "Budapest-Keleti",
-        "to": "Wien Hbf",
-        "fareName": "START Europa AT",
-        "amount": 13,
-        "currency": "EUR",
-        "changes": 0,
-        "trains": [
-          "EN 462"
-        ],
-        "bookingUrl": "https://jegy.mav.hu/",
-        "reservationIncluded": null
-      }
-    },
-    {
-      "date": "2026-11-14",
-      "windowsAttempted": 3,
-      "windowsSuccessful": 3,
-      "returned": 24,
-      "rejected": 1,
-      "errors": [],
-      "best": {
-        "source": "MÁV via mav-prices (unofficial API)",
-        "checkedAt": "2026-11-01T13:24:31.119Z",
-        "date": "2026-11-14",
-        "departure": "2026-11-14T14:55:00+01:00",
-        "arrival": "2026-11-14T17:20:00+01:00",
-        "from": "Budapest-Kelenföld",
-        "to": "Wien Hbf",
-        "fareName": "START Europa AT",
-        "amount": 13,
-        "currency": "EUR",
-        "changes": 0,
-        "trains": [
-          "EC 146"
+          "EC 346"
         ],
         "bookingUrl": "https://jegy.mav.hu/",
         "reservationIncluded": null
@@ -381,7 +1011,7 @@
   "status": "ok",
   "best": {
     "source": "MÁV via mav-prices (unofficial API)",
-    "checkedAt": "2026-11-01T13:24:31.119Z",
+    "checkedAt": "2026-11-01T13:48:36.306Z",
     "date": "2026-11-03",
     "departure": "2026-11-03T20:30:00+01:00",
     "arrival": "2026-11-03T23:20:00+01:00",
@@ -400,7 +1030,7 @@
   "top": [
     {
       "source": "MÁV via mav-prices (unofficial API)",
-      "checkedAt": "2026-11-01T13:24:31.119Z",
+      "checkedAt": "2026-11-01T13:48:36.306Z",
       "date": "2026-11-03",
       "departure": "2026-11-03T20:30:00+01:00",
       "arrival": "2026-11-03T23:20:00+01:00",
@@ -418,7 +1048,7 @@
     },
     {
       "source": "MÁV via mav-prices (unofficial API)",
-      "checkedAt": "2026-11-01T13:24:31.119Z",
+      "checkedAt": "2026-11-01T13:48:36.306Z",
       "date": "2026-11-04",
       "departure": "2026-11-04T20:30:00+01:00",
       "arrival": "2026-11-04T23:20:00+01:00",
@@ -436,7 +1066,7 @@
     },
     {
       "source": "MÁV via mav-prices (unofficial API)",
-      "checkedAt": "2026-11-01T13:24:31.119Z",
+      "checkedAt": "2026-11-01T13:48:36.306Z",
       "date": "2026-11-06",
       "departure": "2026-11-06T20:30:00+01:00",
       "arrival": "2026-11-06T23:20:00+01:00",
@@ -454,7 +1084,7 @@
     },
     {
       "source": "MÁV via mav-prices (unofficial API)",
-      "checkedAt": "2026-11-01T13:24:31.119Z",
+      "checkedAt": "2026-11-01T13:48:36.306Z",
       "date": "2026-11-07",
       "departure": "2026-11-07T18:30:00+01:00",
       "arrival": "2026-11-07T21:20:00+01:00",
@@ -472,7 +1102,7 @@
     },
     {
       "source": "MÁV via mav-prices (unofficial API)",
-      "checkedAt": "2026-11-01T13:24:31.119Z",
+      "checkedAt": "2026-11-01T13:48:36.306Z",
       "date": "2026-11-08",
       "departure": "2026-11-08T20:30:00+01:00",
       "arrival": "2026-11-08T23:20:00+01:00",
@@ -490,50 +1120,32 @@
     },
     {
       "source": "MÁV via mav-prices (unofficial API)",
-      "checkedAt": "2026-11-01T13:24:31.119Z",
-      "date": "2026-11-10",
-      "departure": "2026-11-10T14:55:00+01:00",
-      "arrival": "2026-11-10T17:20:00+01:00",
-      "from": "Budapest-Kelenföld",
+      "checkedAt": "2026-11-01T13:48:36.306Z",
+      "date": "2026-11-03",
+      "departure": "2026-11-03T17:30:00+01:00",
+      "arrival": "2026-11-03T20:20:00+01:00",
+      "from": "Budapest-Keleti",
       "to": "Wien Hbf",
       "fareName": "START Europa AT",
-      "amount": 13,
+      "amount": 17,
       "currency": "EUR",
       "changes": 0,
       "trains": [
-        "EC 146"
+        "rjx 264"
       ],
       "bookingUrl": "https://jegy.mav.hu/",
       "reservationIncluded": null
     },
     {
       "source": "MÁV via mav-prices (unofficial API)",
-      "checkedAt": "2026-11-01T13:24:31.119Z",
-      "date": "2026-11-10",
-      "departure": "2026-11-10T16:30:00+01:00",
-      "arrival": "2026-11-10T19:20:00+01:00",
+      "checkedAt": "2026-11-01T13:48:36.306Z",
+      "date": "2026-11-03",
+      "departure": "2026-11-03T18:30:00+01:00",
+      "arrival": "2026-11-03T21:20:00+01:00",
       "from": "Budapest-Keleti",
       "to": "Wien Hbf",
       "fareName": "START Europa AT",
-      "amount": 13,
-      "currency": "EUR",
-      "changes": 0,
-      "trains": [
-        "EC 148"
-      ],
-      "bookingUrl": "https://jegy.mav.hu/",
-      "reservationIncluded": null
-    },
-    {
-      "source": "MÁV via mav-prices (unofficial API)",
-      "checkedAt": "2026-11-01T13:24:31.119Z",
-      "date": "2026-11-10",
-      "departure": "2026-11-10T18:30:00+01:00",
-      "arrival": "2026-11-10T21:20:00+01:00",
-      "from": "Budapest-Keleti",
-      "to": "Wien Hbf",
-      "fareName": "START Europa AT",
-      "amount": 13,
+      "amount": 17,
       "currency": "EUR",
       "changes": 0,
       "trains": [
@@ -544,68 +1156,14 @@
     },
     {
       "source": "MÁV via mav-prices (unofficial API)",
-      "checkedAt": "2026-11-01T13:24:31.119Z",
-      "date": "2026-11-10",
-      "departure": "2026-11-10T20:30:00+01:00",
-      "arrival": "2026-11-10T23:20:00+01:00",
+      "checkedAt": "2026-11-01T13:48:36.306Z",
+      "date": "2026-11-04",
+      "departure": "2026-11-04T18:30:00+01:00",
+      "arrival": "2026-11-04T21:20:00+01:00",
       "from": "Budapest-Keleti",
       "to": "Wien Hbf",
       "fareName": "START Europa AT",
-      "amount": 13,
-      "currency": "EUR",
-      "changes": 0,
-      "trains": [
-        "EN 462"
-      ],
-      "bookingUrl": "https://jegy.mav.hu/",
-      "reservationIncluded": null
-    },
-    {
-      "source": "MÁV via mav-prices (unofficial API)",
-      "checkedAt": "2026-11-01T13:24:31.119Z",
-      "date": "2026-11-11",
-      "departure": "2026-11-11T14:55:00+01:00",
-      "arrival": "2026-11-11T17:20:00+01:00",
-      "from": "Budapest-Kelenföld",
-      "to": "Wien Hbf",
-      "fareName": "START Europa AT",
-      "amount": 13,
-      "currency": "EUR",
-      "changes": 0,
-      "trains": [
-        "EC 146"
-      ],
-      "bookingUrl": "https://jegy.mav.hu/",
-      "reservationIncluded": null
-    },
-    {
-      "source": "MÁV via mav-prices (unofficial API)",
-      "checkedAt": "2026-11-01T13:24:31.119Z",
-      "date": "2026-11-11",
-      "departure": "2026-11-11T20:30:00+01:00",
-      "arrival": "2026-11-11T23:20:00+01:00",
-      "from": "Budapest-Keleti",
-      "to": "Wien Hbf",
-      "fareName": "START Europa AT",
-      "amount": 13,
-      "currency": "EUR",
-      "changes": 0,
-      "trains": [
-        "EN 462"
-      ],
-      "bookingUrl": "https://jegy.mav.hu/",
-      "reservationIncluded": null
-    },
-    {
-      "source": "MÁV via mav-prices (unofficial API)",
-      "checkedAt": "2026-11-01T13:24:31.119Z",
-      "date": "2026-11-12",
-      "departure": "2026-11-12T18:30:00+01:00",
-      "arrival": "2026-11-12T21:20:00+01:00",
-      "from": "Budapest-Keleti",
-      "to": "Wien Hbf",
-      "fareName": "START Europa AT",
-      "amount": 13,
+      "amount": 17,
       "currency": "EUR",
       "changes": 0,
       "trains": [
@@ -616,68 +1174,32 @@
     },
     {
       "source": "MÁV via mav-prices (unofficial API)",
-      "checkedAt": "2026-11-01T13:24:31.119Z",
-      "date": "2026-11-12",
-      "departure": "2026-11-12T20:30:00+01:00",
-      "arrival": "2026-11-12T23:20:00+01:00",
+      "checkedAt": "2026-11-01T13:48:36.306Z",
+      "date": "2026-11-04",
+      "departure": "2026-11-04T19:30:00+01:00",
+      "arrival": "2026-11-04T22:20:00+01:00",
       "from": "Budapest-Keleti",
       "to": "Wien Hbf",
       "fareName": "START Europa AT",
-      "amount": 13,
+      "amount": 17,
       "currency": "EUR",
       "changes": 0,
       "trains": [
-        "EN 462"
+        "rjx 266"
       ],
       "bookingUrl": "https://jegy.mav.hu/",
       "reservationIncluded": null
     },
     {
       "source": "MÁV via mav-prices (unofficial API)",
-      "checkedAt": "2026-11-01T13:24:31.119Z",
-      "date": "2026-11-13",
-      "departure": "2026-11-13T20:30:00+01:00",
-      "arrival": "2026-11-13T23:20:00+01:00",
+      "checkedAt": "2026-11-01T13:48:36.306Z",
+      "date": "2026-11-05",
+      "departure": "2026-11-05T18:30:00+01:00",
+      "arrival": "2026-11-05T21:20:00+01:00",
       "from": "Budapest-Keleti",
       "to": "Wien Hbf",
       "fareName": "START Europa AT",
-      "amount": 13,
-      "currency": "EUR",
-      "changes": 0,
-      "trains": [
-        "EN 462"
-      ],
-      "bookingUrl": "https://jegy.mav.hu/",
-      "reservationIncluded": null
-    },
-    {
-      "source": "MÁV via mav-prices (unofficial API)",
-      "checkedAt": "2026-11-01T13:24:31.119Z",
-      "date": "2026-11-14",
-      "departure": "2026-11-14T14:55:00+01:00",
-      "arrival": "2026-11-14T17:20:00+01:00",
-      "from": "Budapest-Kelenföld",
-      "to": "Wien Hbf",
-      "fareName": "START Europa AT",
-      "amount": 13,
-      "currency": "EUR",
-      "changes": 0,
-      "trains": [
-        "EC 146"
-      ],
-      "bookingUrl": "https://jegy.mav.hu/",
-      "reservationIncluded": null
-    },
-    {
-      "source": "MÁV via mav-prices (unofficial API)",
-      "checkedAt": "2026-11-01T13:24:31.119Z",
-      "date": "2026-11-14",
-      "departure": "2026-11-14T18:30:00+01:00",
-      "arrival": "2026-11-14T21:20:00+01:00",
-      "from": "Budapest-Keleti",
-      "to": "Wien Hbf",
-      "fareName": "START Europa AT",
-      "amount": 13,
+      "amount": 17,
       "currency": "EUR",
       "changes": 0,
       "trains": [
@@ -688,32 +1210,50 @@
     },
     {
       "source": "MÁV via mav-prices (unofficial API)",
-      "checkedAt": "2026-11-01T13:24:31.119Z",
-      "date": "2026-11-14",
-      "departure": "2026-11-14T20:30:00+01:00",
-      "arrival": "2026-11-14T23:20:00+01:00",
+      "checkedAt": "2026-11-01T13:48:36.306Z",
+      "date": "2026-11-05",
+      "departure": "2026-11-05T19:30:00+01:00",
+      "arrival": "2026-11-05T22:20:00+01:00",
       "from": "Budapest-Keleti",
       "to": "Wien Hbf",
       "fareName": "START Europa AT",
-      "amount": 13,
+      "amount": 17,
       "currency": "EUR",
       "changes": 0,
       "trains": [
-        "EN 462"
+        "rjx 266"
       ],
       "bookingUrl": "https://jegy.mav.hu/",
       "reservationIncluded": null
     },
     {
       "source": "MÁV via mav-prices (unofficial API)",
-      "checkedAt": "2026-11-01T13:24:31.119Z",
-      "date": "2026-11-10",
-      "departure": "2026-11-10T14:55:00+01:00",
-      "arrival": "2026-11-10T17:20:00+01:00",
+      "checkedAt": "2026-11-01T13:48:36.306Z",
+      "date": "2026-11-06",
+      "departure": "2026-11-06T19:30:00+01:00",
+      "arrival": "2026-11-06T22:20:00+01:00",
+      "from": "Budapest-Keleti",
+      "to": "Wien Hbf",
+      "fareName": "START Europa AT",
+      "amount": 17,
+      "currency": "EUR",
+      "changes": 0,
+      "trains": [
+        "rjx 266"
+      ],
+      "bookingUrl": "https://jegy.mav.hu/",
+      "reservationIncluded": null
+    },
+    {
+      "source": "MÁV via mav-prices (unofficial API)",
+      "checkedAt": "2026-11-01T13:48:36.306Z",
+      "date": "2026-11-07",
+      "departure": "2026-11-07T14:55:00+01:00",
+      "arrival": "2026-11-07T17:20:00+01:00",
       "from": "Budapest-Kelenföld",
       "to": "Wien Hbf",
       "fareName": "START Europa AT",
-      "amount": 15,
+      "amount": 17,
       "currency": "EUR",
       "changes": 0,
       "trains": [
@@ -724,14 +1264,32 @@
     },
     {
       "source": "MÁV via mav-prices (unofficial API)",
-      "checkedAt": "2026-11-01T13:24:31.119Z",
-      "date": "2026-11-11",
-      "departure": "2026-11-11T14:55:00+01:00",
-      "arrival": "2026-11-11T17:20:00+01:00",
+      "checkedAt": "2026-11-01T13:48:36.306Z",
+      "date": "2026-11-07",
+      "departure": "2026-11-07T15:30:00+01:00",
+      "arrival": "2026-11-07T18:20:00+01:00",
+      "from": "Budapest-Keleti",
+      "to": "Wien Hbf",
+      "fareName": "START Europa AT",
+      "amount": 17,
+      "currency": "EUR",
+      "changes": 0,
+      "trains": [
+        "rjx 68"
+      ],
+      "bookingUrl": "https://jegy.mav.hu/",
+      "reservationIncluded": null
+    },
+    {
+      "source": "MÁV via mav-prices (unofficial API)",
+      "checkedAt": "2026-11-01T13:48:36.306Z",
+      "date": "2026-11-07",
+      "departure": "2026-11-07T14:55:00+01:00",
+      "arrival": "2026-11-07T17:20:00+01:00",
       "from": "Budapest-Kelenföld",
       "to": "Wien Hbf",
       "fareName": "START Europa AT",
-      "amount": 15,
+      "amount": 19,
       "currency": "EUR",
       "changes": 0,
       "trains": [
@@ -742,23 +1300,95 @@
     },
     {
       "source": "MÁV via mav-prices (unofficial API)",
-      "checkedAt": "2026-11-01T13:24:31.119Z",
-      "date": "2026-11-14",
-      "departure": "2026-11-14T14:55:00+01:00",
-      "arrival": "2026-11-14T17:20:00+01:00",
+      "checkedAt": "2026-11-01T13:48:36.306Z",
+      "date": "2026-11-02",
+      "departure": "2026-11-02T06:54:00+01:00",
+      "arrival": "2026-11-02T09:28:00+01:00",
       "from": "Budapest-Kelenföld",
       "to": "Wien Hbf",
       "fareName": "START Europa AT",
-      "amount": 15,
+      "amount": 20,
       "currency": "EUR",
       "changes": 0,
       "trains": [
-        "EC 146"
+        "EC 346"
+      ],
+      "bookingUrl": "https://jegy.mav.hu/",
+      "reservationIncluded": null
+    },
+    {
+      "source": "MÁV via mav-prices (unofficial API)",
+      "checkedAt": "2026-11-01T13:48:36.306Z",
+      "date": "2026-11-03",
+      "departure": "2026-11-03T06:54:00+01:00",
+      "arrival": "2026-11-03T09:28:00+01:00",
+      "from": "Budapest-Kelenföld",
+      "to": "Wien Hbf",
+      "fareName": "START Europa AT",
+      "amount": 20,
+      "currency": "EUR",
+      "changes": 0,
+      "trains": [
+        "EC 346"
+      ],
+      "bookingUrl": "https://jegy.mav.hu/",
+      "reservationIncluded": null
+    },
+    {
+      "source": "MÁV via mav-prices (unofficial API)",
+      "checkedAt": "2026-11-01T13:48:36.306Z",
+      "date": "2026-11-05",
+      "departure": "2026-11-05T06:54:00+01:00",
+      "arrival": "2026-11-05T09:28:00+01:00",
+      "from": "Budapest-Kelenföld",
+      "to": "Wien Hbf",
+      "fareName": "START Europa AT",
+      "amount": 20,
+      "currency": "EUR",
+      "changes": 0,
+      "trains": [
+        "EC 346"
+      ],
+      "bookingUrl": "https://jegy.mav.hu/",
+      "reservationIncluded": null
+    },
+    {
+      "source": "MÁV via mav-prices (unofficial API)",
+      "checkedAt": "2026-11-01T13:48:36.306Z",
+      "date": "2026-11-06",
+      "departure": "2026-11-06T06:54:00+01:00",
+      "arrival": "2026-11-06T09:28:00+01:00",
+      "from": "Budapest-Kelenföld",
+      "to": "Wien Hbf",
+      "fareName": "START Europa AT",
+      "amount": 20,
+      "currency": "EUR",
+      "changes": 0,
+      "trains": [
+        "EC 346"
+      ],
+      "bookingUrl": "https://jegy.mav.hu/",
+      "reservationIncluded": null
+    },
+    {
+      "source": "MÁV via mav-prices (unofficial API)",
+      "checkedAt": "2026-11-01T13:48:36.306Z",
+      "date": "2026-11-08",
+      "departure": "2026-11-08T06:54:00+01:00",
+      "arrival": "2026-11-08T09:28:00+01:00",
+      "from": "Budapest-Kelenföld",
+      "to": "Wien Hbf",
+      "fareName": "START Europa AT",
+      "amount": 20,
+      "currency": "EUR",
+      "changes": 0,
+      "trains": [
+        "EC 346"
       ],
       "bookingUrl": "https://jegy.mav.hu/",
       "reservationIncluded": null
     }
   ],
-  "totalOffers": 298,
+  "totalOffers": 148,
   "errors": []
 }
