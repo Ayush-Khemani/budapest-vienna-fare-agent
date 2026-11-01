@@ -1,6 +1,20 @@
 name: Check Budapest–Vienna train fares
 on:
   workflow_dispatch:
+    inputs:
+      start_date:
+        description: 'First travel date (YYYY-MM-DD; blank = today)'
+        default: ''
+      scan_days:
+        description: 'Number of days to search (1–60)'
+        default: '14'
+      passenger_age:
+        description: 'Passenger age on the travel date'
+        default: '30'
+      direct_only:
+        description: 'Direct connections only'
+        type: boolean
+        default: false
   schedule:
     # GitHub cron uses UTC; this runs at 08:15 CET / 09:15 CEST.
     - cron: '15 7 * * *'
@@ -21,19 +35,23 @@ jobs:
         with:
           node-version: '22'
       - name: Install dependencies
-        run: npm install --no-audit --no-fund
+        run: npm ci --ignore-scripts --no-audit --no-fund
       - name: Run unit tests
         run: npm test
       - name: Check MÁV fares
+        id: fares
         env:
-          SCAN_DAYS: '14'
+          SCAN_DAYS: ${{ inputs.scan_days || '14' }}
+          START_DATE: ${{ inputs.start_date }}
+          PASSENGER_AGE: ${{ inputs.passenger_age || '30' }}
+          DIRECT_ONLY: ${{ inputs.direct_only }}
           PAUSE_MS: '1800'
           ALERT_BELOW_EUR: '15'
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: npm run check
       - name: Save reports and history to repository
-        if: success()
+        if: ${{ !cancelled() && steps.fares.outcome != 'skipped' }}
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
