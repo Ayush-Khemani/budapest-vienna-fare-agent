@@ -122,5 +122,15 @@
     "preferredDate": "2026-11-06",
     "scanned": 4,
     "successful": 4
+  },
+  {
+    "checkedAt": "2026-11-06T12:57:10.131Z",
+    "mode": "live",
+    "amount": 21,
+    "date": "2026-11-07",
+    "preferredAmount": 24,
+    "preferredDate": "2026-11-08",
+    "scanned": 3,
+    "successful": 3
   }
 ]
