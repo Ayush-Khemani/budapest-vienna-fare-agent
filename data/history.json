@@ -172,5 +172,15 @@
     "preferredDate": null,
     "scanned": 1,
     "successful": 1
+  },
+  {
+    "checkedAt": "2026-11-08T21:11:26.313Z",
+    "mode": "live",
+    "amount": null,
+    "date": null,
+    "preferredAmount": null,
+    "preferredDate": null,
+    "scanned": 1,
+    "successful": 0
   }
 ]
